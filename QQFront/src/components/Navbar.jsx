@@ -64,7 +64,7 @@ export const Navbar = ({
   }, []);*/
 
   return (
-    <div className="bg-amber-500">
+    <div>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
