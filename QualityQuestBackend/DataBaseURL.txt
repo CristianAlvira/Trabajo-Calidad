@@ -1,0 +1,16 @@
+mongodb+srv://root:<password>@cluster0.fkkqruy.mongodb.net/Prueba333?retryWrites=true&w=majority
+Usuarios que hay:
+    {
+    "nombre": "Juan2",
+    "username": "juanska1234",
+    "password":"1234",
+    "email":"juan2@gmail.com",
+    "telefono":"310"    
+    }
+    {
+    "nombre": "Juan",
+    "username": "juanska123",
+    "password":"1234",
+    "email":"juan@gmail.com",
+    "telefono":"310"    
+    }
