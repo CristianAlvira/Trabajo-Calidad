@@ -19,7 +19,7 @@ export const Comments = () => {
           <figcaption className="mt-10">
             <img className="mx-auto h-20 w-20 rounded-full" src="./img/logo.jpg" />
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold text-gray-900">Felipe Diaz - Cristian Alvira - Jhon Pulido</div>
+              <div className="font-semibold text-gray-900">Felipe Diaz - Cristian Alvira - Jhon Pulido - Maiker</div>
               <svg
                 viewBox="0 0 2 2"
                 width={3}
