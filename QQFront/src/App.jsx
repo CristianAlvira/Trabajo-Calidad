@@ -227,7 +227,7 @@ function App() {
             }
           />
 
-<Route
+          <Route
             path="/matriz"
             element={
               loggedInUser ? (

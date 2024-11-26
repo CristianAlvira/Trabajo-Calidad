@@ -42,7 +42,7 @@ export const AfterNav = ({
           </p>
 
           {/* Call to action button */}
-          <div className="mt-8">
+          <div className="mt-8 flex gap-4">
             <Link
               to={{
                 pathname: `${loggedInUser ? "/evaluacion" : "/login"}`,
@@ -56,6 +56,20 @@ export const AfterNav = ({
               className="inline-block rounded-md bg-blue-800 px-8 py-3 text-lg font-medium text-white hover:bg-blue-900 transform transition-all duration-300 ease-in-out hover:scale-105"
             >
               Evalúa ahora
+            </Link>
+            <Link
+              to={{
+                pathname: `${loggedInUser ? "/matriz" : "/login"}`,
+                state: {
+                  loggedInUser,
+                  isPopoverOpen,
+                  handlePopoverOpen,
+                  handlePopoverClose,
+                },
+              }}
+              className="inline-block rounded-md bg-blue-800 px-8 py-3 text-lg font-medium text-white hover:bg-blue-900 transform transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              Matriz de riesgo
             </Link>
           </div>
         </div>
