@@ -58,7 +58,7 @@ export const AjusteParametros2 = ({
   const obtenerUsuarioEvaluacion = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/evaluaciones/${evaluacionId}`
+        `https://trabajo-calidad.vercel.app/api/evaluaciones/${evaluacionId}`
       );
       //console.log("Modelo: ", response.data.modelo);
       setUsuarioEval(response.data.usuario);
@@ -77,7 +77,7 @@ export const AjusteParametros2 = ({
   const obtenerModelo = async () => {
     if (modelo) {
       const response = await axios.get(
-        `http://localhost:3000/api/modelos/obtenerModelo/${modelo}`
+        `https://trabajo-calidad.vercel.app/api/modelos/obtenerModelo/${modelo}`
       );
       console.log("Modelo de la prueba:", response.data.nombreModelo);
       setModelo(response.data.nombreModelo);
@@ -91,7 +91,7 @@ export const AjusteParametros2 = ({
 
   const obtenerParametros = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/parametros/`);
+      const response = await axios.get(`https://trabajo-calidad.vercel.app/api/parametros/`);
       //console.log("Response: ", response);
       setParametros(response.data);
       // Asignar los parámetros a la evaluación
@@ -123,7 +123,7 @@ export const AjusteParametros2 = ({
   
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/parametros/${id}`,
+        `https://trabajo-calidad.vercel.app/api/parametros/${id}`,
         { valorPorcentaje: nuevoPorcentaje },
         {
           headers: {
@@ -214,7 +214,7 @@ export const AjusteParametros2 = ({
     const evaluacionId = location.pathname.split("/").pop();
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/evaluaciones/${evaluacionId}`,
+        `https://trabajo-calidad.vercel.app/api/evaluaciones/${evaluacionId}`,
         { valorCalificacion: valorCalificacion } // Enviar un objeto con la clave "valorCalificacion"
       );
       console.log("Meter valor: ", response.data);

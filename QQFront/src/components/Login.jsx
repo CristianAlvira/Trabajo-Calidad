@@ -27,7 +27,7 @@ export const Login = ({ loggedInUser, setLoggedInUser }) => {
     const password = event.target.password.value;
 
     try {
-      const response = await axios.post("http://localhost:3000/api/usuarios/login", { email, password });
+      const response = await axios.post("https://trabajo-calidad.vercel.app/api/usuarios/login", { email, password });
       const { data } = response;
 
       localStorage.setItem("token", data.token);

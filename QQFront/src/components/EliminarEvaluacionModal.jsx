@@ -13,7 +13,7 @@ export const EliminarEvaluacionModal = ({ onClose, evaluacionId, actualizarEvalu
   };
 
   const handleEliminarEvaluacion = () => {
-    const url = `http://localhost:3000/api/evaluaciones/${evaluacionId}`;
+    const url = `https://trabajo-calidad.vercel.app/api/evaluaciones/${evaluacionId}`;
     const token = localStorage.getItem("token");
     const headers = {
       Authorization: `Bearer ${token}`,

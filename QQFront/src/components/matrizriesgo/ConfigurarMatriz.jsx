@@ -61,7 +61,7 @@ const ConfigurarMatriz = ({ riesgosSeleccionados, loggedInUser }) => {
       // Actualizar los riesgos en el backend
       await Promise.all(
         riesgosFinales.map((riesgo) =>
-          axios.put(`http://localhost:3000/api/riesgos/${riesgo._id}`, riesgo)
+          axios.put(`https://trabajo-calidad.vercel.app/api/riesgos/${riesgo._id}`, riesgo)
         )
       );
   

@@ -41,7 +41,7 @@ export const OlvidePassword = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/api/usuarios/olvide-password', { email });
+            const response = await axios.post('https://trabajo-calidad.vercel.app/api/usuarios/olvide-password', { email });
             console.log(response);
             setMsg(response.data.msg);
         } catch (error) {
@@ -55,7 +55,7 @@ export const OlvidePassword = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.get(`http://localhost:3000/api/usuarios/olvide-password/${token}`);
+            const response = await axios.get(`https://trabajo-calidad.vercel.app/api/usuarios/olvide-password/${token}`);
             console.log(response);
             setMsg(response.data.msg);
             navigate('/nuevoPassword', { state: { token: token } });

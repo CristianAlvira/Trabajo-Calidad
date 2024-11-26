@@ -23,7 +23,7 @@ const RiesgosPorFase = ({ isAdmin, loggedInUser }) => {
   // Cargar riesgos desde el backend
   const fetchRiesgos = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/riesgos");
+      const response = await axios.get("https://trabajo-calidad.vercel.app/api/riesgos");
       const riesgos = response.data;
 
       // Organizar riesgos por fase
@@ -60,7 +60,7 @@ const RiesgosPorFase = ({ isAdmin, loggedInUser }) => {
 
   const handleDelete = async (fase, id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/riesgos/${id}`);
+      await axios.delete(`https://trabajo-calidad.vercel.app/api/riesgos/${id}`);
       setRiesgosPorFase((prev) => ({
         ...prev,
         [fase]: prev[fase].filter((riesgo) => riesgo._id !== id),

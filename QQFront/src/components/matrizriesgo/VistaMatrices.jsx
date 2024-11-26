@@ -29,7 +29,7 @@ const VistaMatrices = ({ riesgos, loggedInUser }) => {
       };
   
       const response = await axios.post(
-        `http://localhost:3000/api/matriz/${usuarioId}`,
+        `https://trabajo-calidad.vercel.app/api/matriz/${usuarioId}`,
         matriz
       );
       console.log("Matriz guardada exitosamente:", response.data);

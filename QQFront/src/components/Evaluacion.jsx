@@ -41,7 +41,7 @@ export const Evaluacion = ({
     if (loggedInUser && loggedInUser._id) {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/evaluaciones/usuarioEvaluaciones/${loggedInUser._id}`,
+          `https://trabajo-calidad.vercel.app/api/evaluaciones/usuarioEvaluaciones/${loggedInUser._id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,7 +60,7 @@ export const Evaluacion = ({
   const obtenerModelos = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/modelos/obtenerModelos"
+        "https://trabajo-calidad.vercel.app/api/modelos/obtenerModelos"
       );
       const modelos = response.data.reduce((acc, modelo) => {
         acc[modelo._id] = modelo.nombreModelo;
@@ -89,7 +89,7 @@ export const Evaluacion = ({
       await Promise.all(
         evaluacionesSinCalificacionIds.map(async (evaluacionId) => {
           await axios.delete(
-            `http://localhost:3000/api/evaluaciones/${evaluacionId}`
+            `https://trabajo-calidad.vercel.app/api/evaluaciones/${evaluacionId}`
           );
           console.log(`Evaluación eliminada: ${evaluacionId}`);
         })

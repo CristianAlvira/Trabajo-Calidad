@@ -45,7 +45,7 @@ export const Navbar = ({
     if (token) {
       const fetchUserData = async () => {
         try {
-          const response = await axios.get("http://localhost:3000/api/usuarios/perfil", {
+          const response = await axios.get("https://trabajo-calidad.vercel.app/api/usuarios/perfil", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

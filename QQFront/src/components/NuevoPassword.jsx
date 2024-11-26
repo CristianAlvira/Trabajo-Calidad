@@ -47,7 +47,7 @@ export const NuevoPassword = () => {
   
     try {
 
-      const response = await axios.post(`http://localhost:3000/api/usuarios/olvide-password/${token}`, { password: password });
+      const response = await axios.post(`https://trabajo-calidad.vercel.app/api/usuarios/olvide-password/${token}`, { password: password });
 
       console.log(response);
       setMsg(response.data.msg);

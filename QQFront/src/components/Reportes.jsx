@@ -23,7 +23,7 @@ export const Reportes = ({
   const obtenerReportes = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/reportes/usuario/${loggedInUser._id}`,
+        `https://trabajo-calidad.vercel.app/api/reportes/usuario/${loggedInUser._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -78,7 +78,7 @@ export const Reportes = ({
                     <button
                       onClick={() =>
                         window.open(
-                          `http://localhost:3000/api/reportes/pdf/${reporte._id}`,
+                          `https://trabajo-calidad.vercel.app/api/reportes/pdf/${reporte._id}`,
                           "_blank"
                         )
                       }

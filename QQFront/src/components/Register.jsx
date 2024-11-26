@@ -27,7 +27,7 @@ export const Register = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/api/usuarios", {
+      const response = await axios.post("https://trabajo-calidad.vercel.app/api/usuarios", {
         email,
         password,
         nombre,

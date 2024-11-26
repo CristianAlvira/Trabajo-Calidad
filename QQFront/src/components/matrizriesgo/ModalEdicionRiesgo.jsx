@@ -133,7 +133,7 @@ const ModalEdicionRiesgo = ({ closeModal, riesgo, fetchRiesgos }) => {
 
     try {
       console.log("Datos enviados al backend para editar:", updatedRiesgo);
-      await axios.put(`http://localhost:3000/api/riesgos/${riesgo._id}`, updatedRiesgo);
+      await axios.put(`https://trabajo-calidad.vercel.app/api/riesgos/${riesgo._id}`, updatedRiesgo);
       console.log("Riesgo actualizado correctamente");
       fetchRiesgos(); // Refrescar los riesgos tras editar
       closeModal();

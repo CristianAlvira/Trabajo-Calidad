@@ -12,7 +12,7 @@ export const ConfirmAccount = () => {
       event.preventDefault();
     
       try {
-        const response = await axios.get(`http://localhost:3000/api/usuarios/confirmar/${token}`);
+        const response = await axios.get(`https://trabajo-calidad.vercel.app/api/usuarios/confirmar/${token}`);
         console.log(response.data);
         navigate('/login');
       } catch (error) {

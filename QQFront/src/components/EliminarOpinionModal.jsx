@@ -15,7 +15,7 @@ export const EliminarOpinionModal = ({ onClose, opinionId, actualizarOpiniones }
   };
 
   const handleEliminarOpinion = () => {
-    const url = `http://localhost:3000/api/opiniones/${opinionId}`;
+    const url = `https://trabajo-calidad.vercel.app/api/opiniones/${opinionId}`;
     const token = localStorage.getItem('token');
     const headers = {
       'Authorization': `Bearer ${token}`

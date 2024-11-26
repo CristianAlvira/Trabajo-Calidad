@@ -177,7 +177,7 @@ const ModalCreacionRiesgo = ({ closeModal, ultimoCodigo, fetchRiesgos }) => {
   
     try {
       console.log("Datos enviados al backend:", nuevoRiesgo); // Agregado para ver el envío
-      const response = await axios.post("http://localhost:3000/api/riesgos", nuevoRiesgo);
+      const response = await axios.post("https://trabajo-calidad.vercel.app/api/riesgos", nuevoRiesgo);
       console.log("Riesgo creado exitosamente:", response.data);
       fetchRiesgos(); // Refrescar riesgos tras crear uno nuevo
       closeModal();

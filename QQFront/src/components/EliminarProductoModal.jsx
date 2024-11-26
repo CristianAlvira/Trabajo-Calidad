@@ -14,7 +14,7 @@ export const EliminarProductoModal = ({ modalOpen, setModalOpen, productoAElimin
   const token = localStorage.getItem('token');
 
   const eliminarProducto = () => {
-    axios.delete(`http://localhost:3000/api/productos/${productoAEliminar}`, {
+    axios.delete(`https://trabajo-calidad.vercel.app/api/productos/${productoAEliminar}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -43,7 +43,7 @@ export const NuevaEvaluacion = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/evaluaciones/",
+        "https://trabajo-calidad.vercel.app/api/evaluaciones/",
         evaluacion,
         {
           headers: {
@@ -114,7 +114,7 @@ export const NuevaEvaluacion = ({
     const token = localStorage.getItem("token");
     if (loggedInUser && loggedInUser._id) {
       axios
-        .get(`http://localhost:3000/api/modelos/obtenerModelos`)
+        .get(`https://trabajo-calidad.vercel.app/api/modelos/obtenerModelos`)
         .then((response) => {
           setModelos(response.data);
           console.log("Modelos encontrados: ", response.data);

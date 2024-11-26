@@ -36,7 +36,7 @@ export const MatrizInicio = ({
   const obtenerMatrices = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/matriz/${loggedInUser._id}`,
+        `https://trabajo-calidad.vercel.app/api/matriz/${loggedInUser._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
